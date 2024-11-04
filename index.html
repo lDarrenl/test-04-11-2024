@@ -11,25 +11,45 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Profile">Profile</a></li>
+            <li><a href="#class">Contact</a></li>
         </ul>
     </nav>
 
     <!-- contenue principal -->
     <main>
-        <h1>A brand and product designer working with clients globally</h1>
+        <h1 id="home">une page pour upload des image dans sa gallery personel</h1>
         <div class="tags">
-            <span>Expertise</span>
-            <span>Branding</span>
-            <span>Product</span>
-            <span>Design Systems</span>
+            <span onclick="toggleNightMode()">Mode Nuit</span>
+            <span onclick="rickRoll()">Cliquez-moi</span>
+            <span onclick="removeLastImage()" style="cursor: pointer; margin-right: 10px;">Supprimer la dernière image</span>
+            <span onclick="clearAllImages()" style="cursor: pointer;">Supprimer toutes les images</span>
         </div>
-        <div class="images-placeholder">
-            <p>&lt;images here&gt;</p>
-        </div>
-        <div class="contact">
+
+        <body>
+
+            <div class="images-placeholder" onclick="document.getElementById('imageInput').click()">
+                <p>&lt;clic ici pour ajouté une image&gt;</p>
+            </div>
+    
+            <input type="file" id="imageInput" style="display: none;" accept="image/*" onchange="addImage(event)">
+    
+            <div class="gallery" id="gallery">
+            </div>
+
+            <div class="gallery" id="Profile">
+                <div class="gallery-item"><img src="asset/img/Illustration.png" alt="Image 1"></div>
+                <div class="gallery-item"><img src="asset/img/image0.jpg" alt="Image 2"></div>
+                <div class="gallery-item"><img src="asset/img/Darkruller.png" alt="Image 3"></div>
+                <div class="gallery-item"><img src="asset/img/Screenshot_2024-03-18-11-10-19-16_84c9ef400ab248a2e4a3b31139e21163.jpg" alt="Image 4"></div>
+                <div class="gallery-item"><img src="asset/img/Screenshot_2024-10-27-06-17-36-251_jp.ne.ibis.ibispaintx.app-edit.jpg" alt="Image 5"></div>
+                <div class="gallery-item"><img src="asset/img/SPOILER_image0.jpg" alt="Image 6"></div>
+            </div>
+        
+        </body>
+
+        <div class="contact" id="class">
             <h2>Let's work together.</h2>
             <p>Get in touch.</p>
         </div>
@@ -37,13 +57,15 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Oli Harris 2023</p>
+        <p>&copy; cepoko 2024</p>
         <ul>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">LinkedIn</a></li>
             <li><a href="#">Mail</a></li>
         </ul>
     </footer>
+
+    <script src="asset/script.js"></script>
 
 </body>
 </html>
